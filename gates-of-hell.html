@@ -12,6 +12,49 @@
     <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f4f4f4;
+            }
+            header {
+                text-align: center;
+                padding: 20px;
+                background-color: #333;
+                color: white;
+            }
+            h1 {
+                margin: 0;
+            }
+            .gallery-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+                padding: 20px;
+            }
+            .gallery-item {
+                width: 300px;
+                height: 200px;
+                background-color: #ddd;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 8px;
+            }
+            .gallery-item img, .gallery-item video {
+                max-width: 100%;
+                max-height: 100%;
+                border-radius: 8px;
+            }
+            .gallery-item p {
+                text-align: center;
+                font-size: 14px;
+                margin-top: 10px;
+            }
+        </style>
 </head>
 
 <body>
@@ -44,7 +87,7 @@
     <div id="lead">
         <div id="lead-content">
             <h1>Gates of Hell</h1>
-            <h2>Video game built in Unity and Blender</h2>
+            <h2>a video game built in Unity and Blender</h2>
             <a href="https://github.com/Piecewise13/angle-defender" class="btn-rounded-white">Go to Github Repository</a>
         </div>
         <!-- End #lead-content -->
@@ -64,117 +107,57 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <h2 class="heading">About Me</h2>
+                    <h2 class="heading">About the Project</h2>
                 </div>
                 <div class="col-md-8">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat. Donec
-                        eu vehicula neque. Donec viverra lorem nunc, tempus euismod eros sollicitudin ut. Quisque et tincidunt libero. Donec id pharetra justo. Proin euismod lacinia dolor, eu scelerisque justo tempus pharetra. Vivamus nunc justo, finibus
-                        ut nisl sed, euismod rhoncus nulla. Proin sed magna egestas, egestas ante et, congue eros. In consequat, mauris dapibus tincidunt suscipit, ex libero aliquet diam, at maximus risus enim non leo.
+                        I've been developing this game for the last three years in my free time. 
                     </p>
                 </div>
             </div>
         </div>
     </div>
     <!-- End #about -->
-<!-- 
-    <div id="experience" class="background-alt">
-        <h2 class="heading">Experience</h2>
-        <div id="experience-timeline">
-            <div data-date="September 2015 – September 2016">
-                <h3>Employer Name</h3>
-                <h4>Job Title</h4>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-                </p>
-            </div>
-
-            <div data-date="September 2015 – September 2016">
-                <h3>Employer Name</h3>
-                <h4>Job Title</h4>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-                </p>
-            </div>
-
-            <div data-date="September 2015 – September 2016">
-                <h3>Employer Name</h3>
-                <h4>Job Title</h4>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-                </p>
-            </div>
-        </div>
-    </div> -->
-    <!-- End #experience -->
-
-    <div id="education">
-        <h2 class="heading">Education</h2>
-        <div class="education-block">
-            <h3>Stanford University</h3>
-            <span class="education-date">Sept 2021 - Current</span>
-            <h4>Bachelor of Science in Computer Science</h4>
-            <p>
-               Currently a junior studying Computer Science with a focus in Human-Computer interaction. I'm a varsity athlete on the Men's Volleyball team.
-            </p>
-        </div>
-        <!-- End .education-block -->
-<!-- 
-        <div class="education-block">
-            <h3>University of Ottawa</h3>
-            <span class="education-date">Sept 2016 - Sept 2017</span>
-            <h4>Bachelor of Science in Computer Science</h4>
-            <ul>
-                <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
-                <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
-                <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
-            </ul>
-        </div> -->
-        <!-- End .education-block -->
-    </div>
-    <!-- End #education -->
 
     <div id="projects" class="background-alt">
-        <h2 class="heading">Projects</h2>
-        <div class="container">
-            <div class="row">
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/gates_cover.png" width="300" height="300" style="object-fit: cover;"/>
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>The Gates of Hell</h3>
-                        <p>
-                           A tower defence, first person shooter where the player is trying escape hell while protecting an unborn angel. Developed using the Unity game engine, Blender for the 3D modeling, and Vectornator for the UI icons.
-                        </p>
-                        <a href="#">View Project</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
+        <h2 class="heading">Project Content</h2>
 
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/project.jpg" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>BranchOff IOS App</h3>
-                        <p>
-                            An app designed to give more power to the parents in their struggle to control their child's screentime. Developed using Swift for the front end, firebase for the database, and Javascript for the backend server.
-                        </p>
-                        <a href="#">View Project</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
+        <div class="gallery-container">
+            <!-- Image Gallery -->
+            <div class="gallery-item">
+                <img src="images/Screenshot 2025-01-05 at 3.37.16 PM.png" alt="Image 1">
+                <p>Project Image 1</p>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/300x200" alt="Image 2">
+                <p>Project Image 2</p>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/300x200" alt="Image 3">
+                <p>Project Image 3</p>
+            </div>
+        
+            <!-- Video Gallery -->
+            <div class="gallery-item">
+                <video controls>
+                    <source src="https://via.placeholder.com/300x200?text=Video+1" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p>Project Video 1</p>
+            </div>
+            <div class="gallery-item">
+                <video controls>
+                    <source src="https://via.placeholder.com/300x200?text=Video+2" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p>Project Video 2</p>
+            </div>
+            <div class="gallery-item">
+                <video controls>
+                    <source src="https://via.placeholder.com/300x200?text=Video+3" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p>Project Video 3</p>
             </div>
         </div>
     </div>
