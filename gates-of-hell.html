@@ -13,6 +13,22 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
         <style>
+            .row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  flex: 50%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
             .gallery-container {
                 display: flex;
                 flex-wrap: wrap;
@@ -107,7 +123,15 @@
 
     <div id="projects" class="background-alt">
         <h2 class="heading">Project Content</h2>
-
+        <div class="row">
+            <div class="column">
+                <img src="images/gameplay_image.png">
+                <img src="images/basic_enemy_screenshot.png">
+                <img src="images/devil_house.png">
+                <source src="images/basic enemy attack.mp4" type="video/mp4">
+            </div>
+        </div>
+        
         <div class="gallery-container">
             <!-- Image Gallery -->
             <div class="gallery-item">
