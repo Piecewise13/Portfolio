@@ -14,24 +14,24 @@
     <link href="css/styles.css" rel="stylesheet">
     <style>
         .row_grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+            display: flex;
+            flex-wrap: wrap;
             gap: 10px;
         }
 
         .row_grid img {
             margin-top: 8px;
             vertical-align: middle;
-            /* max-width: 50%;
-            height: auto; */
+            max-width: 50%;
+            height: auto; 
             border-radius: 8px;
             object-fit: contain;
         }
         .row_grid video {
             margin-top: 8px;
             vertical-align: middle;
-            /* max-width: 50%;
-            height: auto; */
+            max-width: 50%;
+            height: auto; 
             border-radius: 8px;
             object-fit: contain;
         }
@@ -106,7 +106,6 @@
         <div class="row_grid">
             <img src="images/gameplay_image.png">
             <img src="images/basic_enemy_screenshot.png">
-            <img src="images/devil_house.png">
             <img src="images/sniper.png">
             <img src="images/editor screenshot.png">
             <img src="images/devil_house.png">
