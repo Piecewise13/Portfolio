@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BranchOff | Luke McFall</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <style>
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .feature-card {
+            background: #1a1f3a;
+            border: 2px solid #2a2f4a;
+            border-radius: 15px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: #7c93f5;
+            opacity: 0;
+            transition: 0.3s ease opacity;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5),
+                       0 0 25px rgba(124, 147, 245, 0.2);
+            border-color: #7c93f5;
+        }
+
+        .feature-card:hover::before {
+            opacity: 1;
+        }
+
+        .feature-icon {
+            font-size: 2.5em;
+            color: #7c93f5;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .feature-card h3 {
+            color: #e2e8f0;
+            font-size: 1.3em;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            color: #cbd5e1;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .project-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .project-badge {
+            display: inline-block;
+            background: #9b87f5;
+            color: #050812;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            box-shadow: 0 0 15px rgba(155, 135, 245, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .tech-stack li {
+            background: rgba(124, 147, 245, 0.1);
+            color: #7c93f5;
+            padding: 8px 16px;
+            border-radius: 15px;
+            font-size: 0.95em;
+            border: 1px solid rgba(124, 147, 245, 0.3);
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .tech-stack li:hover {
+            background: #7c93f5;
+            color: #050812;
+            border-color: #7c93f5;
+            box-shadow: 0 0 12px rgba(124, 147, 245, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .role-badge {
+            display: inline-block;
+            background: rgba(124, 147, 245, 0.15);
+            color: #7c93f5;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+            margin: 5px;
+            border: 1px solid rgba(124, 147, 245, 0.3);
+        }
+
+        .team-section {
+            background: #1a1f3a;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+            border: 2px solid #2a2f4a;
+        }
+
+        .team-member {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 15px 0;
+        }
+
+        .team-member i {
+            font-size: 2em;
+            color: #7c93f5;
+        }
+
+        .team-member-info h4 {
+            color: #e2e8f0;
+            margin: 0 0 5px 0;
+            font-size: 1.1em;
+        }
+
+        .team-member-info p {
+            color: #94a3b8;
+            margin: 0;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mobile-menu-open" class="shadow-large">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+    <!-- End #mobile-menu-toggle -->
+    <header>
+        <div id="mobile-menu-close">
+            <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
+        <ul id="menu" class="shadow">
+            <li>
+                <a href="index.html">Return Home</a>
+            </li>
+        </ul>
+    </header>
+    <!-- End header -->
+
+    <div id="lead">
+        <div id="lead-content">
+            <h1>BranchOff</h1>
+            <h2>Gamified Screen Time Management for Families</h2>
+            <div class="lead-badges">
+                <span class="badge">📱 iOS App</span>
+                <span class="badge">🎮 Gamification</span>
+                <span class="badge">👨‍👩‍👧‍👦 Family Tech</span>
+            </div>
+            <a href="https://branchoffapp.wixsite.com/landingpage" class="btn-rounded-white">
+                <i class="fa fa-external-link" aria-hidden="true"></i> Visit Website
+            </a>
+        </div>
+        <!-- End #lead-content -->
+
+        <div id="lead-overlay"></div>
+
+        <div id="lead-down">
+            <span>
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </span>
+        </div>
+        <!-- End #lead-down -->
+    </div>
+    <!-- End #lead -->
+
+    <div id="about">
+        <div class="container">
+            <div class="project-header">
+                <span class="project-badge">📱 Mobile App Development</span>
+                <h2 class="heading">About the Project</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="lead-text">
+                        BranchOff is a multiplayer gamification app designed to revolutionize how parents manage their children's screen time. Unlike traditional restriction-based approaches, BranchOff transforms screen time management into an engaging challenge system.
+                    </p>
+                    <p>
+                        As <strong>Co-Founder and Full-Stack Developer</strong>, I architected and built the complete technical infrastructure—from Figma designs to production-ready Swift code, Node.js backend synchronization, and Firebase database management. The app leveraged iOS's native Screen Time API to create a seamless, real-time challenge experience between parents and children.
+                    </p>
+                    <p>
+                        The core innovation was our <strong>challenge-based system</strong>: parents create custom challenges with specific durations, app restrictions, and rewards. Children can accept these challenges, and both parties receive live updates through push notifications. If a child completes the challenge, they earn the reward; if they forfeit by opening a blocked app, they lose the reward but regain access immediately—putting choice and motivation at the center of the experience.
+                    </p>
+                    <div class="team-section">
+                        <h3 style="color: #e2e8f0; margin-bottom: 20px;"><i class="fa fa-users" style="color: #7c93f5; margin-right: 10px;"></i>Team</h3>
+                        <div class="team-member">
+                            <i class="fa fa-code"></i>
+                            <div class="team-member-info">
+                                <h4>Luke McFall</h4>
+                                <p>Co-Founder & Full-Stack Developer</p>
+                                <div style="margin-top: 8px;">
+                                    <span class="role-badge">iOS Development</span>
+                                    <span class="role-badge">Backend Engineering</span>
+                                    <span class="role-badge">UI/UX Design</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-member">
+                            <i class="fa fa-lightbulb-o"></i>
+                            <div class="team-member-info">
+                                <h4>Max Gordon</h4>
+                                <p>Co-Founder (UC Santa Barbara Student-Athlete)</p>
+                                <div style="margin-top: 8px;">
+                                    <span class="role-badge">User Research</span>
+                                    <span class="role-badge">Business Development</span>
+                                    <span class="role-badge">User Acquisition</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End #about -->
+
+    <div id="projects">
+        <h2 class="heading">App Screenshots</h2>
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px; max-width: 1200px; margin-left: auto; margin-right: auto;">
+                <div class="feature-card" style="padding: 0; overflow: hidden;">
+                    <img src="images/branchoff/1758690984923.jpeg" alt="BranchOff App Screenshot" style="width: 100%; height: auto; display: block; border-radius: 15px;">
+                </div>
+                <div class="feature-card" style="padding: 0; overflow: hidden;">
+                    <img src="images/branchoff/1758691014164.jpeg" alt="BranchOff App Screenshot" style="width: 100%; height: auto; display: block; border-radius: 15px;">
+                </div>
+                <div class="feature-card" style="padding: 0; overflow: hidden;">
+                    <img src="images/branchoff/1758691029340.jpeg" alt="BranchOff App Screenshot" style="width: 100%; height: auto; display: block; border-radius: 15px;">
+                </div>
+                <div class="feature-card" style="padding: 0; overflow: hidden;">
+                    <img src="images/branchoff/1758691047693.jpeg" alt="BranchOff App Screenshot" style="width: 100%; height: auto; display: block; border-radius: 15px;">
+                </div>
+                <div class="feature-card" style="padding: 0; overflow: hidden;">
+                    <img src="images/branchoff/1758691056452.jpeg" alt="BranchOff App Screenshot" style="width: 100%; height: auto; display: block; border-radius: 15px;">
+                </div>
+                <div class="feature-card" style="padding: 0; overflow: hidden;">
+                    <img src="images/branchoff/1758691084527.jpeg" alt="BranchOff App Screenshot" style="width: 100%; height: auto; display: block; border-radius: 15px;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End #projects -->
+
+    <div id="experience" class="background-alt">
+        <h2 class="heading">Key Features</h2>
+        <div class="container">
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class="fa fa-trophy feature-icon" aria-hidden="true"></i>
+                    <h3>Challenge System</h3>
+                    <p>Parents create custom challenges with specific durations, app blocks, and rewards. Children can accept or forfeit at any time, maintaining agency over their choices.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fa fa-clock-o feature-icon" aria-hidden="true"></i>
+                    <h3>Live Synchronization</h3>
+                    <p>Real-time countdown timers on both parent and child devices, synchronized through Node.js backend for instant updates across all devices.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fa fa-bell feature-icon" aria-hidden="true"></i>
+                    <h3>Push Notifications</h3>
+                    <p>Children can send status updates to parents. Automatic notifications when challenges are accepted, forfeited, or completed successfully.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fa fa-mobile feature-icon" aria-hidden="true"></i>
+                    <h3>iOS Screen Time API</h3>
+                    <p>Native integration with iOS Screen Time API for seamless app blocking across all of the child's devices without workarounds.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fa fa-database feature-icon" aria-hidden="true"></i>
+                    <h3>Real-Time Database</h3>
+                    <p>Firebase backend storing challenge data, user profiles, and game states with instant synchronization between family members.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fa fa-line-chart feature-icon" aria-hidden="true"></i>
+                    <h3>Challenge Tracking</h3>
+                    <p>Complete history of challenges with status tracking (active, won, lost, forfeited) and detailed analytics for parents.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="education-tech">
+        <h2 class="heading">Technical Architecture</h2>
+        <div class="container" style="max-width: 900px;">
+            <div class="education-block">
+                <h3>Frontend Development</h3>
+                <h4 style="color: #7c93f5;">Swift & UIKit</h4>
+                <p>
+                    Designed complete user experience in Figma before implementation. Built dual interfaces for parent and child users with distinct feature sets. Implemented real-time countdown displays, challenge management interfaces, and push notification handling. Integrated iOS Screen Time API for native app blocking functionality.
+                </p>
+            </div>
+            <div class="education-block">
+                <h3>Backend Infrastructure</h3>
+                <h4 style="color: #7c93f5;">Node.js Server</h4>
+                <p>
+                    Developed Node.js backend to handle real-time data synchronization between devices. Managed bi-directional communication for instant updates when challenges are created, accepted, forfeited, or completed. Implemented push notification delivery system for cross-device updates.
+                </p>
+            </div>
+            <div class="education-block">
+                <h3>Database Management</h3>
+                <h4 style="color: #7c93f5;">Firebase</h4>
+                <p>
+                    Architected database schema for user profiles, active challenges, and historical data. Stored challenge parameters (duration, start/end times, blocked apps, rewards) and real-time status updates (active, won, lost, forfeited). Implemented efficient queries for instant data retrieval and updates.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="outcomes" class="background-alt">
+        <h2 class="heading">Project Outcomes & Lessons Learned</h2>
+        <div class="container" style="max-width: 800px;">
+            <div style="background: #1a1f3a; border-radius: 15px; padding: 30px; border: 2px solid #2a2f4a;">
+                <p style="color: #cbd5e1; line-height: 1.8; font-size: 1.05em; margin-bottom: 20px;">
+                    Over the course of one year, we developed a <strong style="color: #7c93f5;">fully functional prototype deployed to TestFlight</strong>, demonstrating the complete technical feasibility of the concept. The app successfully integrated complex iOS APIs, real-time synchronization, and gamification mechanics.
+                </p>
+                <p style="color: #cbd5e1; line-height: 1.8; font-size: 1.05em; margin-bottom: 20px;">
+                    <strong style="color: #9b87f5;">Key Achievement:</strong> Built a production-ready full-stack iOS application from design to deployment, managing the entire technical pipeline independently while coordinating with a co-founder on business strategy.
+                </p>
+                <p style="color: #cbd5e1; line-height: 1.8; font-size: 1.05em; margin-bottom: 20px;">
+                    <strong style="color: #9b87f5;">Lessons Learned:</strong> While we successfully proved the technical concept, we encountered challenges in user acquisition and funding that ultimately led to the project's conclusion. This experience taught me valuable lessons about product-market fit, the importance of early user validation, and the realities of startup funding—lessons that complement my technical capabilities.
+                </p>
+                <p style="color: #cbd5e1; line-height: 1.8; font-size: 1.05em; margin: 0;">
+                    The project demonstrates my ability to execute full-stack mobile development at a professional level, from user research and design through implementation and deployment—skills directly applicable to software engineering roles.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="skills">
+        <h2 class="heading">Technologies & Tools Used</h2>
+        <ul class="tech-stack">
+            <li>Swift</li>
+            <li>iOS Development</li>
+            <li>UIKit</li>
+            <li>iOS Screen Time API</li>
+            <li>Node.js</li>
+            <li>Firebase</li>
+            <li>Real-Time Databases</li>
+            <li>Push Notifications</li>
+            <li>Figma</li>
+            <li>UI/UX Design</li>
+            <li>TestFlight</li>
+            <li>REST APIs</li>
+        </ul>
+    </div>
+    <!-- End #skills -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 copyright">
+                    <p>
+                        Copyright &copy; <span id="current-year">2025</span> Luke McFall
+                    </p>
+                </div>
+                <div class="col-sm-2 top">
+                    <span id="to-top">
+                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="col-sm-5 social">
+                    <ul>
+                        <li>
+                            <a href="https://github.com/Piecewise13" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://linkedin.com/in/your-profile" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="mailto:your.email@stanford.edu" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End footer -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/scripts.min.js"></script>
+</body>
+
+</html>

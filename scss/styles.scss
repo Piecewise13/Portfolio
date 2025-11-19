@@ -33,20 +33,29 @@
     ------------------------
 */
 
-// Define base and accent colors
-$base-color: #3498db;
-$base-color-hover: darken($base-color, 10%);
+// Define base and accent colors (refined dark mode with subtle accents)
+$base-color: #7c93f5; // Softer blue-purple
+$base-color-hover: #6b82e4;
+$accent-color: #9b87f5; // Muted purple
+$game-accent: #f59aad; // Soft pink
+$tech-accent: #7dd3fc; // Soft sky blue
+$warning-accent: #fbbf24; // Softer yellow
 
-// Define background colors
-$background: #fff;
-$background-alt: #f2f2f5;
+// Define background colors (dark mode)
+$background: #0a0e27; // Deep navy blue
+$background-alt: #151a35; // Slightly lighter navy
+$background-card: #1a1f3a; // Card background
+$background-dark: #050812; // Darkest
 
 // Define border colors
-$border: #dcd9d9;
+$border: #2a2f4a;
+$border-glow: rgba(124, 147, 245, 0.2);
 
 // Define text colors
-$heading: #374054;
-$text: #74808a;
+$heading: #e2e8f0;
+$text: #94a3b8;
+$text-light: #cbd5e1;
+$text-bright: #f1f5f9;
 
 /*
     ---------------------
@@ -87,6 +96,8 @@ $text: #74808a;
 body {
     font-family: 'Lato', sans-serif;
     font-size: 16px;
+    background: $background;
+    color: $text-light;
 
     &.active {
         overflow: hidden;
@@ -999,3 +1010,629 @@ footer {
     }
 
 }
+
+/*
+    -------------------------------------------
+    ----- Custom Styles for Enhanced Design -----
+    -------------------------------------------
+*/
+
+// Glowing text animation
+@keyframes glow {
+    0%, 100% {
+        text-shadow: 0 0 10px rgba(124, 147, 245, 0.3),
+                     0 0 20px rgba(124, 147, 245, 0.2);
+    }
+    50% {
+        text-shadow: 0 0 15px rgba(124, 147, 245, 0.5),
+                     0 0 30px rgba(124, 147, 245, 0.3);
+    }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+// Hero Section Enhancements
+#lead {
+    background: linear-gradient(135deg, $background-dark 0%, $background 50%, $background-alt 100%);
+    position: relative;
+    overflow: hidden;
+    
+    // Animated background effect
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: 
+            radial-gradient(circle at 20% 50%, rgba(124, 147, 245, 0.06) 0%, transparent 50%),
+            radial-gradient(circle at 80% 50%, rgba(155, 135, 245, 0.06) 0%, transparent 50%);
+        animation: gradient-shift 8s ease infinite;
+        background-size: 200% 200%;
+    }
+    
+    .separator {
+        display: inline-block;
+        margin: 0 15px;
+        color: $accent-color;
+        font-weight: 300;
+    }
+    
+    .lead-badges {
+        margin: 25px 0;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        position: relative;
+        z-index: 2;
+    }
+    
+    .badge {
+        background: rgba(26, 31, 58, 0.8);
+        backdrop-filter: blur(10px);
+        padding: 10px 20px;
+        border-radius: 25px;
+        color: $text-bright;
+        font-size: 0.95em;
+        font-weight: 500;
+        border: 2px solid $border;
+        box-shadow: 0 0 15px rgba(124, 147, 245, 0.15);
+        @include transition(0.3s, ease, all);
+        
+        &:hover {
+            background: rgba(124, 147, 245, 0.1);
+            border-color: $base-color;
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 0 25px rgba(124, 147, 245, 0.3),
+                       0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+    }
+    
+    .lead-tagline {
+        color: $text-light;
+        font-size: 1.2em;
+        font-weight: 300;
+        margin: 20px 0;
+        font-style: italic;
+        position: relative;
+        z-index: 2;
+    }
+}
+
+#lead-content {
+    position: relative;
+    z-index: 2;
+    
+    h1 {
+        color: $text-bright;
+        font-weight: 900;
+        text-shadow: 0 0 20px rgba(124, 147, 245, 0.2);
+    }
+    
+    h2 {
+        color: $base-color;
+        font-weight: 600;
+    }
+}
+
+#lead-overlay {
+    background: rgba(5, 8, 18, 0.5);
+}
+
+.btn-rounded-white {
+    background: transparent;
+    color: $base-color;
+    border: 2px solid $base-color;
+    box-shadow: 0 0 15px rgba(124, 147, 245, 0.2);
+    
+    &:hover {
+        background: $base-color;
+        color: $background-dark;
+        box-shadow: 0 0 30px rgba(124, 147, 245, 0.4),
+                   0 10px 30px rgba(0, 0, 0, 0.5);
+        transform: translateY(-3px);
+    }
+}
+
+// About Section Enhancements
+#about {
+    background: $background;
+    
+    .lead-text {
+        font-size: 1.15em;
+        line-height: 1.7;
+        margin-bottom: 20px;
+        color: $text-bright;
+    }
+    
+    p {
+        line-height: 1.8;
+        margin-bottom: 15px;
+        color: $text-light;
+    }
+    
+    strong {
+        color: $base-color;
+        font-weight: 600;
+    }
+    
+    .about-highlights {
+        display: flex;
+        gap: 30px;
+        margin-top: 40px;
+        flex-wrap: wrap;
+    }
+    
+    .highlight-item {
+        flex: 1;
+        min-width: 200px;
+        text-align: center;
+        padding: 25px;
+        background: $background-card;
+        border-radius: 15px;
+        border: 2px solid $border;
+        position: relative;
+        overflow: hidden;
+        @include transition(0.3s, ease, all);
+        
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: $base-color;
+            opacity: 0;
+            @include transition(0.3s, ease, opacity);
+        }
+        
+        &:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5),
+                       0 0 25px rgba(124, 147, 245, 0.2);
+            border-color: $base-color;
+            
+            &::before {
+                opacity: 1;
+            }
+        }
+        
+        i {
+            font-size: 2.5em;
+            color: $base-color;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        h4 {
+            margin: 10px 0 5px 0;
+            color: $heading;
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+        
+        p {
+            margin: 0;
+            color: $text;
+            font-size: 0.9em;
+        }
+    }
+}
+
+.heading {
+    color: $heading;
+    
+    &:after {
+        background: $base-color;
+        box-shadow: 0 0 10px rgba(124, 147, 245, 0.3);
+    }
+}
+
+// Education Enhancements
+#education {
+    background: $background-alt;
+}
+
+.education-block {
+    background: $background-card;
+    border: 2px solid $border;
+    border-radius: 15px;
+    position: relative;
+    @include transition(0.3s, ease, all);
+    
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5),
+                   0 0 25px rgba(124, 147, 245, 0.15);
+        border-color: $base-color;
+    }
+    
+    h3 {
+        color: $heading;
+    }
+    
+    span {
+        color: $base-color;
+    }
+    
+    h4 {
+        color: $text-light;
+    }
+    
+    h5 {
+        color: $accent-color;
+        font-weight: 500;
+        font-size: 1em;
+        margin: 5px 0 15px 0;
+        clear: both;
+    }
+    
+    p {
+        color: $text-light;
+    }
+    
+    .education-extras {
+        margin-top: 15px;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    
+    .tag {
+        background: $base-color;
+        color: $background-dark;
+        padding: 6px 15px;
+        border-radius: 20px;
+        font-size: 0.85em;
+        font-weight: 600;
+        box-shadow: 0 0 12px rgba(124, 147, 245, 0.3);
+    }
+}
+
+// Project Enhancements
+#projects {
+    background: $background;
+}
+
+.project {
+    background: $background-card;
+    border: 2px solid $border;
+    position: relative;
+    overflow: hidden;
+    @include transition(0.3s, ease, all);
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(124, 147, 245, 0.08) 0%, transparent 70%);
+        opacity: 0;
+        @include transition(0.5s, ease, opacity);
+    }
+    
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6),
+                   0 0 30px rgba(124, 147, 245, 0.2);
+        border-color: $base-color;
+        
+        &::before {
+            opacity: 1;
+            animation: float 3s ease-in-out infinite;
+        }
+    }
+}
+
+.project-info {
+    position: relative;
+    z-index: 1;
+    
+    h3 {
+        color: $heading;
+    }
+    
+    p {
+        color: $text-light;
+    }
+}
+
+.project-type {
+    display: inline-block;
+    background: $accent-color;
+    color: $background-dark;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    box-shadow: 0 0 15px rgba(155, 135, 245, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.project-tags {
+    margin: 15px 0;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.tech-tag {
+    background: rgba(124, 147, 245, 0.1);
+    color: $base-color;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.85em;
+    border: 1px solid rgba(124, 147, 245, 0.3);
+    font-weight: 500;
+    @include transition(0.2s, ease, all);
+    
+    &:hover {
+        background: $base-color;
+        color: $background-dark;
+        border-color: $base-color;
+        box-shadow: 0 0 12px rgba(124, 147, 245, 0.4);
+        transform: translateY(-2px);
+    }
+}
+
+.btn-project {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 25px;
+    background: $base-color;
+    color: $background-dark;
+    border-radius: 25px;
+    font-weight: 700;
+    box-shadow: 0 0 15px rgba(124, 147, 245, 0.3);
+    @include transition(0.3s, ease, all);
+    
+    &:hover {
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0 0 25px rgba(124, 147, 245, 0.5),
+                   0 10px 30px rgba(0, 0, 0, 0.5);
+        text-decoration: none;
+        color: $background-dark;
+    }
+}
+
+// Skills Section Enhancements
+#skills {
+    background: $background-alt;
+    
+    .skills-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    
+    .skill-category {
+        background: $background-card;
+        border: 2px solid $border;
+        border-radius: 15px;
+        padding: 30px;
+        position: relative;
+        overflow: hidden;
+        @include transition(0.3s, ease, all);
+        
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: $base-color;
+        }
+        
+        &:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5),
+                       0 0 25px rgba(124, 147, 245, 0.2);
+            border-color: $base-color;
+        }
+        
+        h3 {
+            color: $heading;
+            font-size: 1.3em;
+            font-weight: 600;
+            margin: 0 0 20px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            
+            i {
+                color: $base-color;
+                font-size: 1.2em;
+            }
+        }
+        
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        li {
+            background: rgba(124, 147, 245, 0.05);
+            color: $text-light;
+            padding: 10px 15px;
+            margin: 8px 0;
+            border-radius: 8px;
+            font-size: 0.95em;
+            font-weight: 500;
+            border: 1px solid rgba(124, 147, 245, 0.2);
+            position: relative;
+            overflow: hidden;
+            @include transition(0.2s, ease, all);
+            
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                width: 3px;
+                background: $base-color;
+                opacity: 0;
+                @include transition(0.2s, ease, opacity);
+            }
+            
+            &:hover {
+                background: rgba(124, 147, 245, 0.15);
+                color: $base-color;
+                transform: translateX(10px);
+                border-color: $base-color;
+                box-shadow: 0 0 12px rgba(124, 147, 245, 0.2);
+                
+                &::before {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+// Contact Section Enhancements
+#contact {
+    background: $background-dark;
+    position: relative;
+    overflow: hidden;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: 
+            radial-gradient(circle at 30% 50%, rgba(124, 147, 245, 0.08) 0%, transparent 50%),
+            radial-gradient(circle at 70% 50%, rgba(155, 135, 245, 0.08) 0%, transparent 50%);
+        animation: gradient-shift 8s ease infinite;
+        background-size: 200% 200%;
+    }
+    
+    h2 {
+        color: $heading;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .contact-text {
+        color: $text-light;
+        font-size: 1.1em;
+        max-width: 600px;
+        margin: 10px auto;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .contact-links {
+        margin-top: 30px;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .btn-contact {
+        display: inline-block;
+        padding: 15px 35px;
+        background: $base-color;
+        color: $background-dark;
+        border-radius: 30px;
+        font-weight: 700;
+        font-size: 1.1em;
+        box-shadow: 0 0 20px rgba(124, 147, 245, 0.3);
+        @include transition(0.3s, ease, all);
+        border: 2px solid transparent;
+        
+        i {
+            margin-right: 8px;
+        }
+        
+        &:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 0 35px rgba(124, 147, 245, 0.5),
+                       0 15px 40px rgba(0, 0, 0, 0.5);
+            text-decoration: none;
+            color: $background-dark;
+        }
+    }
+}
+
+// Header and Navigation dark mode
+header {
+    ul {
+        background: rgba(26, 31, 58, 0.95);
+        backdrop-filter: blur(10px);
+        border: 1px solid $border;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+    
+    a {
+        color: $text-light;
+        
+        &:hover {
+            color: $base-color;
+            background: rgba(0, 245, 255, 0.1);
+            box-shadow: 0 0 15px rgba(0, 245, 255, 0.2);
+        }
+    }
+}
+
+// Footer dark mode
+footer {
+    background: $background-dark;
+    border-top: 1px solid $border;
+}
+
+.shadow {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.shadow-large {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+.background-alt {
+    background: $background-alt;
+}
+
+// Responsive adjustments for new elements
+@media only screen and (max-width: 768px) {
+    #lead .lead-badges {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #about .about-highlights {
+        flex-direction: column;
+    }
+    
+    #skills .skills-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-tags {
+        justify-content: center;
+    }
+}
+
+

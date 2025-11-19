@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Portfolio</title>
+    <title>Luke McFall | Software Engineer & Game Developer</title>
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
@@ -52,9 +52,14 @@
     <div id="lead">
         <div id="lead-content">
             <h1>Luke McFall</h1>
-            <h2>Software Engineer</h2>
-            <h3>Portfolio is still under construction</h3>
-            <a href="#" class="btn-rounded-white">Download Resume</a>
+            <h2>Software Engineer <span class="separator">×</span> Game Developer</h2>
+            <div class="lead-badges">
+                <span class="badge">🎓 Stanford CS</span>
+                <span class="badge">🏐 Varsity Athlete</span>
+                <span class="badge">🎮 Game Creator</span>
+            </div>
+            <p class="lead-tagline">Building apps by day, crafting games by night</p>
+            <a href="#about" class="btn-rounded-white">Learn More</a>
         </div>
         <!-- End #lead-content -->
 
@@ -76,10 +81,32 @@
                     <h2 class="heading">About Me</h2>
                 </div>
                 <div class="col-md-8">
-                    <p>
-                       A current junior at Stanford studying Computer Science and playing varisty volleyball. I'm co-founder and lead developer at BranchOff, a screen time reduction app designed to help parents control their child's screentime. Currently we are testing out app with over 100 parents in California and
-                       will soon be avalible publicly on the app store. In my free time, I like to play and make video games. While I don't have any public releases yet, I have participated in a number of game jams as well as currently working on a personal project. 
+                    <p class="lead-text">
+                       I'm a junior at <strong>Stanford University</strong> studying Computer Science with a focus in Human-Computer Interaction, while competing as a <strong>varsity athlete</strong> on the Men's Volleyball team.
                     </p>
+                    <p>
+                       As co-founder and lead developer at <strong>BranchOff</strong>, I'm building an iOS app that helps parents manage their children's screen time more effectively. We're currently testing with over 100 families in California, with a public App Store launch coming soon.
+                    </p>
+                    <p>
+                       Beyond professional development, I'm passionate about <strong>game development</strong>. I've participated in multiple game jams, created "The Gates of Hell" (a tower defense FPS), and I'm actively working on new game projects. I love exploring the intersection of compelling gameplay, narrative design, and technical innovation.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fa fa-code" aria-hidden="true"></i>
+                            <h4>Full-Stack Developer</h4>
+                            <p>iOS, Web, Backend</p>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fa fa-gamepad" aria-hidden="true"></i>
+                            <h4>Game Developer</h4>
+                            <p>Unity, C#, 3D Modeling</p>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fa fa-trophy" aria-hidden="true"></i>
+                            <h4>Student Athlete</h4>
+                            <p>Stanford Volleyball</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -120,11 +147,16 @@
         <h2 class="heading">Education</h2>
         <div class="education-block">
             <h3>Stanford University</h3>
-            <span class="education-date">Sept 2021 - Current</span>
+            <span class="education-date">Sept 2022 - June 2026</span>
             <h4>Bachelor of Science in Computer Science</h4>
+            <h5>Focus: Human-Computer Interaction</h5>
             <p>
-               Currently a junior studying Computer Science with a focus in Human-Computer interaction. I'm a varsity athlete on the Men's Volleyball team.
+               Junior studying Computer Science with a specialization in Human-Computer Interaction. Balancing rigorous academics with competing as a varsity athlete on Stanford's Men's Volleyball team.
             </p>
+            <div class="education-extras">
+                <span class="tag">🏐 NCAA Division I Athlete</span>
+                <span class="tag">📚 CS + HCI</span>
+            </div>
         </div>
         <!-- End .education-block -->
 <!-- 
@@ -149,7 +181,7 @@
     <!-- End #education -->
 
     <div id="projects" class="background-alt">
-        <h2 class="heading">Projects</h2>
+        <h2 class="heading">Featured Projects</h2>
         <div class="container">
             <div class="row">
                 <div class="project shadow-large">
@@ -158,11 +190,18 @@
                     </div>
                     <!-- End .project-image -->
                     <div class="project-info">
+                        <div class="project-type">🎮 Game Development</div>
                         <h3>The Gates of Hell</h3>
                         <p>
-                           A tower defence, first person shooter where the player is trying escape hell while protecting an unborn angel. Developed using the Unity game engine, Blender for the 3D modeling, and Vectornator for the UI icons.
+                           A hybrid tower defense/FPS where players fight their way out of hell while protecting an unborn angel. Features custom 3D models, dynamic AI enemies, and strategic base-building mechanics.
                         </p>
-                        <a href="https://piecewise13.github.io/Portfolio/gates-of-hell.html">View Project</a>
+                        <div class="project-tags">
+                            <span class="tech-tag">Unity</span>
+                            <span class="tech-tag">C#</span>
+                            <span class="tech-tag">Blender</span>
+                            <span class="tech-tag">3D Modeling</span>
+                        </div>
+                        <a href="https://piecewise13.github.io/Portfolio/gates-of-hell.html" class="btn-project">View Project</a>
                     </div>
                     <!-- End .project-info -->
                 </div>
@@ -174,11 +213,18 @@
                     </div>
                     <!-- End .project-image -->
                     <div class="project-info">
-                        <h3>BranchOff IOS App</h3>
+                        <div class="project-type">📱 Mobile App</div>
+                        <h3>BranchOff</h3>
                         <p>
-                            An app designed to give more power to the parents in their struggle to control their child's screentime. Developed using Swift for the front end, firebase for the database, and Node.js for the backend server.
+                            Co-founded and leading development of an iOS app empowering parents with better screen time management tools. Currently in beta testing with 100+ families across California.
                         </p>
-                        <a href="https://branchoffapp.wixsite.com/landingpage">View Project</a>
+                        <div class="project-tags">
+                            <span class="tech-tag">Swift</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">iOS</span>
+                        </div>
+                        <a href="https://branchoffapp.wixsite.com/landingpage" class="btn-project">Learn More</a>
                     </div>
                     <!-- End .project-info -->
                 </div>
@@ -189,49 +235,52 @@
     <!-- End #projects -->
 
     <div id="skills">
-        <h2 class="heading">Skills</h2>
-        <ul>
-            <li>JavaScript</li>
-            <li>Python</li>
-            <li>Ruby</li>
-            <li>Go</li>
-            <li>Node.js</li>
-            <li>AngularJs</li>
-            <li>React</li>
-            <li>Elixir</li>
-            <li>Java</li>
-            <li>C</li>
-            <li>C#</li>
-            <li>C++</li>
-            <li>Ruby on Rails</li>
-            <li>JavaScript</li>
-            <li>Python</li>
-            <li>Ruby</li>
-            <li>Go</li>
-            <li>Node.js</li>
-            <li>AngularJs</li>
-            <li>React</li>
-            <li>Elixir</li>
-            <li>Java</li>
-            <li>C</li>
-            <li>C#</li>
-            <li>C++</li>
-            <li>Ruby on Rails</li>
-        </ul>
+        <h2 class="heading">Technical Skills</h2>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3><i class="fa fa-gamepad" aria-hidden="true"></i> Game Development</h3>
+                <ul>
+                    <li>Unity</li>
+                    <li>C#</li>
+                    <li>C++</li>
+                    <li>Blender</li>
+                    <li>3D Modeling</li>
+                    <li>Game Design</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3><i class="fa fa-mobile" aria-hidden="true"></i> Mobile & Web</h3>
+                <ul>
+                    <li>Swift</li>
+                    <li>iOS Development</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                    <li>Node.js</li>
+                    <li>HTML/CSS</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3><i class="fa fa-code" aria-hidden="true"></i> Languages & Tools</h3>
+                <ul>
+                    <li>Python</li>
+                    <li>Java</li>
+                    <li>C</li>
+                    <li>Firebase</li>
+                    <li>Git</li>
+                    <li>REST APIs</li>
+                </ul>
+            </div>
+        </div>
     </div>
     <!-- End #skills -->
 
     <div id="contact">
-        <h2>Get in Touch</h2>
-        <div id="contact-form">
-            <form method="POST" action="https://formspree.io/email@email.com">
-                <input type="hidden" name="_subject" value="Contact request from personal website" />
-                <input type="email" name="_replyto" placeholder="Your email" required>
-                <textarea name="message" placeholder="Your message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
+        <h2>Let's Connect</h2>
+        <p class="contact-text">Interested in collaborating on a project or just want to chat about games, software, or volleyball?</p>
+        <p class="contact-text">Feel free to reach out!</p>
+        <div class="contact-links">
+            <a href="mailto:your.email@stanford.edu" class="btn-contact"><i class="fa fa-envelope" aria-hidden="true"></i> Email Me</a>
         </div>
-        <!-- End #contact-form -->
     </div>
     <!-- End #contact -->
 
@@ -240,7 +289,7 @@
             <div class="row">
                 <div class="col-sm-5 copyright">
                     <p>
-                        Copyright &copy; <span id="current-year">2022</span> YOUR NAME
+                        Copyright &copy; <span id="current-year">2025</span> Luke McFall
                     </p>
                 </div>
                 <div class="col-sm-2 top">
@@ -251,22 +300,13 @@
                 <div class="col-sm-5 social">
                     <ul>
                         <li>
-                            <a href="https://github.com/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                            <a href="https://github.com/Piecewise13" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
                         </li>
                         <li>
-                            <a href="https://stackoverflow.com/" target="_blank"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
+                            <a href="https://linkedin.com/in/your-profile" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                         </li>
                         <li>
-                            <a href="https://linkedin.com/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                            <a href="mailto:your.email@stanford.edu" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
                         </li>
                     </ul>
                 </div>

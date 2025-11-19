@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Portfolio</title>
+    <title>The Gates of Hell | Luke McFall</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
@@ -13,32 +13,102 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
     <style>
-        .row_grid {
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            border: 2px solid #2a2f4a;
+            background: #1a1f3a;
+            transition: all 0.3s ease;
+            aspect-ratio: 16/9;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5),
+                       0 0 25px rgba(124, 147, 245, 0.2);
+            border-color: #7c93f5;
+        }
+
+        .gallery-item img,
+        .gallery-item video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .project-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .project-badge {
+            display: inline-block;
+            background: #9b87f5;
+            color: #050812;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            box-shadow: 0 0 15px rgba(155, 135, 245, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .tech-stack {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
             justify-content: center;
-            align-items: flex-start;
+            margin-top: 20px;
         }
 
-        .row_grid img {
-            flex: 1 1 100px;
-            margin-top: 8px;
-            vertical-align: middle;
-            max-width: 75%;
-            height: auto;
-            border-radius: 8px;
-            object-fit: cover;
+        .tech-stack li {
+            background: rgba(124, 147, 245, 0.1);
+            color: #7c93f5;
+            padding: 8px 16px;
+            border-radius: 15px;
+            font-size: 0.95em;
+            border: 1px solid rgba(124, 147, 245, 0.3);
+            font-weight: 500;
+            transition: all 0.2s ease;
         }
 
-        .row_grid video {
-            flex: 1 1 100px;
-            margin-top: 8px;
-            vertical-align: middle;
-            max-width: 75%;
-            height: auto;
-            border-radius: 8px;
-            object-fit: cover;
+        .tech-stack li:hover {
+            background: #7c93f5;
+            color: #050812;
+            border-color: #7c93f5;
+            box-shadow: 0 0 12px rgba(124, 147, 245, 0.4);
+            transform: translateY(-2px);
         }
     </style>
 </head>
@@ -62,10 +132,16 @@
 
     <div id="lead">
         <div id="lead-content">
-            <h1>Gates of Hell</h1>
-            <h2>a video game built in Unity and Blender</h2>
-            <a href="https://github.com/Piecewise13/angle-defender" class="btn-rounded-white">Go to Github
-                Repository</a>
+            <h1>The Gates of Hell</h1>
+            <h2>Tower Defense FPS Game</h2>
+            <div class="lead-badges">
+                <span class="badge">🎮 Unity Game</span>
+                <span class="badge">🎨 3D Modeling</span>
+                <span class="badge">⚔️ First Person Shooter</span>
+            </div>
+            <a href="https://github.com/Piecewise13/angle-defender" class="btn-rounded-white">
+                <i class="fa fa-github" aria-hidden="true"></i> View on GitHub
+            </a>
         </div>
         <!-- End #lead-content -->
 
@@ -82,55 +158,125 @@
 
     <div id="about">
         <div class="container">
-
+            <div class="project-header">
+                <span class="project-badge">🎮 Game Development</span>
+                <h2 class="heading">About the Project</h2>
+            </div>
             <div class="row">
-                <div class="col-md-4">
-                    <h2 class="heading">About the Project</h2>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/5NZCE9e6i0Y?si=q-nOdwW8MEXN2Ax5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; muted; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                        Gates of Hell is a personal project I have been working on for the last three years. It's a tower defense, first person shooter where a player is trying to escape hell while protecting an unborn angel. Coded in Unity and modeled in Blender, Gates of Hell is completely made using assets hand crafted by me.
+                <div class="col-md-12">
+                    <p class="lead-text">
+                        The Gates of Hell is a tower defense first-person shooter developed from 2021-2023, where I honed my game development skills through hands-on experimentation and iteration.
                     </p>
+                    <p>
+                        Players defend an unborn angel from waves of demonic enemies while fighting their way out of hell. The game features a unique three-mode system: <strong>Combat Mode</strong> for active FPS combat, <strong>Defense Mode</strong> for building walls and defensive structures around the protected object, and <strong>Tower Mode</strong> for placing specialized towers including turrets, healers, and resource printers.
+                    </p>
+                    <p>
+                        This solo project served as my comprehensive game development training ground. I created <strong>75-100+ hand-crafted 3D models</strong> including characters, environmental assets, weapons, and tower structures—all built from scratch in <strong>Blender</strong>. The project showcases my ability to execute the full development pipeline: game design, 3D modeling, C# programming, AI development, and audio production.
+                    </p>
+                    <p>
+                        While the project was eventually shelved to pursue more advanced concepts, it represents a critical learning phase where I mastered core game development skills through iteration and problem-solving. The technical challenges I overcame—particularly developing 4+ unique enemy AI systems including a sophisticated flying AI with raycasting-based decision making—laid the foundation for my current game development expertise.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/5NZCE9e6i0Y?si=q-nOdwW8MEXN2Ax5" title="Gates of Hell Gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- End #about -->
 
-    <div id="projects" class="background-alt">
-        <h2 class="heading">Project Content</h2>
-        <div class="row_grid">
-            <img src="images/gameplay_image.png">
-            <video playsinline autoplay muted loop>
-                <source src="images/basic enemy attack.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <img src="images/sniper.png">
-            <img src="images/random_pic.png">
-            <img src="images/zeplin.png">
-            <img src="images/editor screenshot.png">
-            <img src="images/devil_house.png">
-
-
+    <div id="experience" class="background-alt">
+        <h2 class="heading">Key Features & Technical Achievements</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="highlight-item">
+                        <i class="fa fa-gamepad" aria-hidden="true"></i>
+                        <h4>Three-Mode Gameplay System</h4>
+                        <p>Seamless switching between Combat, Defense, and Tower modes for strategic gameplay depth</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="highlight-item">
+                        <i class="fa fa-cube" aria-hidden="true"></i>
+                        <h4>75+ Custom 3D Assets</h4>
+                        <p>Hand-modeled characters, weapons, environments, and structures built entirely in Blender</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 30px;">
+                <div class="col-md-6">
+                    <div class="highlight-item">
+                        <i class="fa fa-rocket" aria-hidden="true"></i>
+                        <h4>Advanced Enemy AI Systems</h4>
+                        <p>4+ unique AI types including flying enemies with raycasting-based pathfinding and decision making</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="highlight-item">
+                        <i class="fa fa-cogs" aria-hidden="true"></i>
+                        <h4>Complex Tower System</h4>
+                        <p>Multiple tower types including turrets, healers, walls, and resource management structures</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+    <div id="projects">
+        <h2 class="heading">Project Gallery</h2>
+        <div class="container">
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/gameplay_image.png" alt="Gates of Hell Gameplay">
+                </div>
+                <div class="gallery-item">
+                    <video playsinline autoplay muted loop>
+                        <source src="images/basic enemy attack.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/sniper.png" alt="Sniper View">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/random_pic.png" alt="Game Scene">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/zeplin.png" alt="Zeppelin Enemy">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/editor screenshot.png" alt="Unity Editor">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/devil_house.png" alt="Devil House">
+                </div>
+            </div>
+        </div>
     </div>
-
-
-
     <!-- End #projects -->
 
-    <div id="skills">
-        <h2 class="heading">Developed with</h2>
-        <ul>
+    <div id="skills" class="background-alt">
+        <h2 class="heading">Technologies & Tools Used</h2>
+        <ul class="tech-stack">
             <li>C#</li>
-            <li>Unity</li>
-            <li>Blender</li>
-            <li>Vectornator</li>
-            <li>GIMP</li>
-            <li>Audacity</li>
+            <li>Unity Game Engine</li>
+            <li>Blender 3D Modeling</li>
+            <li>AI Pathfinding</li>
+            <li>Raycasting Systems</li>
+            <li>Vectornator (UI Design)</li>
+            <li>GIMP (Texture Editing)</li>
+            <li>Audacity (Audio Production)</li>
         </ul>
+        <div class="container" style="margin-top: 40px; max-width: 800px;">
+            <p style="text-align: center; color: #cbd5e1; font-size: 1.05em; line-height: 1.8;">
+                This project represents a formative period in my game development journey (2021-2023). Through extensive iteration and problem-solving, I developed proficiency in the complete game development pipeline—from initial concept to playable prototype—preparing me for more ambitious projects.
+            </p>
+        </div>
     </div>
     <!-- End #skills -->
 
@@ -140,7 +286,7 @@
             <div class="row">
                 <div class="col-sm-5 copyright">
                     <p>
-                        Copyright &copy; <span id="current-year">2022</span> YOUR NAME
+                        Copyright &copy; <span id="current-year">2025</span> Luke McFall
                     </p>
                 </div>
                 <div class="col-sm-2 top">
@@ -151,28 +297,13 @@
                 <div class="col-sm-5 social">
                     <ul>
                         <li>
-                            <a href="https://github.com/" target="_blank"><i class="fa fa-github"
-                                    aria-hidden="true"></i></a>
+                            <a href="https://github.com/Piecewise13" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
                         </li>
                         <li>
-                            <a href="https://stackoverflow.com/" target="_blank"><i class="fa fa-stack-overflow"
-                                    aria-hidden="true"></i></a>
+                            <a href="https://linkedin.com/in/your-profile" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                         </li>
                         <li>
-                            <a href="https://linkedin.com/" target="_blank"><i class="fa fa-linkedin"
-                                    aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"
-                                    aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"
-                                    aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus"
-                                    aria-hidden="true"></i></a>
+                            <a href="mailto:your.email@stanford.edu" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
                         </li>
                     </ul>
                 </div>
