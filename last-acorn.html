@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Last Acorn - Luke McFall</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="mobile-menu-open" class="shadow-large">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+
+    <header class="sticky">
+        <div id="mobile-menu-close">
+            <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
+        <ul id="menu" class="shadow">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#skills">Skills</a></li>
+            <li><a href="index.html#education">Education</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </header>
+
+    <div id="lead">
+        <div id="lead-content">
+            <h1>The Last Acorn</h1>
+            <h2>2D Puzzle Platformer • Unity • CS 247G Project</h2>
+            <div class="project-links" style="margin-top: 30px;">
+                <a href="https://studio-team22.itch.io/the-last-acorn" target="_blank" class="btn-rounded-white" 
+                   style="margin: 10px; padding: 15px 30px; font-size: 1.1em; background: rgba(124, 147, 245, 0.15); border: 2px solid #7c93f5; color: #7c93f5;">
+                    <i class="fa fa-gamepad" aria-hidden="true"></i> Play Demo on itch.io
+                </a>
+            </div>
+        </div>
+
+        <div id="lead-overlay"></div>
+
+        <div id="lead-down">
+            <span>
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </span>
+        </div>
+    </div>
+
+    <div id="about" class="background-alt" style="padding: 75px 15px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="heading" style="text-align: center; margin-bottom: 50px;">About The Project</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <p style="font-size: 1.1em; line-height: 1.8; text-align: center; margin-bottom: 30px;">
+                        <strong>The Last Acorn</strong> is a 2D puzzle platformer created for Stanford's CS 247G (Designed for Play) class. 
+                        Players control a mother squirrel on a quest to collect acorns while navigating through forests and dangerous caves. 
+                        The game features custom-built movement mechanics including climbing, jumping, and gliding that work seamlessly together 
+                        to create engaging platforming challenges.
+                    </p>
+                    <p style="font-size: 1.1em; line-height: 1.8; text-align: center;">
+                        Built in Unity with charming 2D pixel art, the game is currently in early beta with a playable demo on itch.io. 
+                        Development has focused heavily on mechanical polish through extensive playtesting, ensuring tight, responsive controls 
+                        that make platforming feel satisfying and precise.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="iteration" class="background-alt" style="padding: 75px 15px;">
+        <div class="container">
+            <h2 class="heading" style="text-align: center; margin-bottom: 30px;">Development Journey & Iteration</h2>
+            <p class="lead" style="text-align: center; max-width: 800px; margin: 0 auto 3rem; color: #b8c5db;">
+                Through four major iterations over the past year, The Last Acorn evolved from a class prototype 
+                to a polished puzzle platformer. Each demo phase brought new insights, refined mechanics, and 
+                improved player experience through extensive playtesting and feedback.
+            </p>
+
+            <!-- Demo 1 -->
+            <div class="iteration-section" style="margin-bottom: 5rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(124, 147, 245, 0.2);">
+                <div class="iteration-header" style="text-align: center; margin-bottom: 2rem;">
+                    <span class="iteration-badge" style="display: inline-block; background: linear-gradient(135deg, #7c93f5 0%, #9b87f5 100%); color: white; padding: 8px 20px; border-radius: 20px; font-size: 14px; font-weight: 600; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 1px;">Demo 1</span>
+                    <h3 style="color: #fff; font-size: 28px; margin: 0;">Initial Prototype - Core Mechanics Foundation</h3>
+                </div>
+                <div class="iteration-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 2rem;">
+                    <div class="iteration-media">
+                        <video controls muted loop style="width: 100%; border-radius: 8px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); border: 1px solid rgba(124, 147, 245, 0.3);">
+                            <source src="images/last-acorn/demo1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="iteration-description">
+                        <h4 style="color: #7c93f5; font-size: 18px; margin-top: 0; margin-bottom: 0.8rem;">Key Features:</h4>
+                        <ul style="list-style: none; padding: 0; margin: 0 0 1rem 0;">
+                            <li style="color: #b8c5db; padding: 8px 0 8px 25px; position: relative; line-height: 1.6;"><span style="position: absolute; left: 0; color: #7c93f5; font-weight: bold;">▸</span> Basic movement mechanics (jump, climb, glide)</li>
+                            <li style="color: #b8c5db; padding: 8px 0 8px 25px; position: relative; line-height: 1.6;"><span style="position: absolute; left: 0; color: #7c93f5; font-weight: bold;">▸</span> Simple forest environment</li>
+                            <li style="color: #b8c5db; padding: 8px 0 8px 25px; position: relative; line-height: 1.6;"><span style="position: absolute; left: 0; color: #7c93f5; font-weight: bold;">▸</span> Core player controls established</li>
+                            <li style="color: #b8c5db; padding: 8px 0 8px 25px; position: relative; line-height: 1.6;"><span style="position: absolute; left: 0; color: #7c93f5; font-weight: bold;">▸</span> Initial acorn collection system</li>
+                        </ul>
+                        <h4 style="color: #7c93f5; font-size: 18px; margin-top: 1.5rem; margin-bottom: 0.8rem;">Learnings:</h4>
+                        <ul style="list-style: none; padding: 0; margin: 0 0 1rem 0;">
+                            <li style="color: #b8c5db; padding: 8px 0 8px 25px; position: relative; line-height: 1.6;"><span style="position: absolute; left: 0; color: #7c93f5; font-weight: bold;">▸</span> Movement felt too floaty - needed tighter controls</li>
+                            <li style="color: #b8c5db; padding: 8px 0 8px 25px; position: relative; line-height: 1.6;"><span style="position: absolute; left: 0; color: #7c93f5; font-weight: bold;">▸</span> Visual feedback for interactions was unclear</li>
+                            <li style="color: #b8c5db; padding: 8px 0 8px 25px; position: relative; line-height: 1.6;"><span style="position: absolute; left: 0; color: #7c93f5; font-weight: bold;">▸</span> Players wanted more environmental variety</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="iteration-screenshot">
+                    <img src="images/last-acorn/demo1.png" alt="Demo 1 Screenshot" style="width: 100%; border-radius: 8px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); border: 1px solid rgba(124, 147, 245, 0.3);">
+                </div>
+            </div>
+
+            <!-- Demo 2 -->
+            <div class="iteration-section" style="margin-bottom: 5rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(124, 147, 245, 0.2);">
+                <div class="iteration-header" style="text-align: center; margin-bottom: 2rem;">
+                    <span class="iteration-badge" style="display: inline-block; background: linear-gradient(135deg, #7c93f5 0%, #9b87f5 100%); color: white; padding: 8px 20px; border-radius: 20px; font-size: 14px; font-weight: 600; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 1px;">Demo 2</span>
+                    <h3 style="color: #fff; font-size: 28px; margin: 0;">Refined Movement & Cave Introduction</h3>
+                </div>
+                <div class="iteration-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 2rem;">
+                    <div class="iteration-description" style="order: 1;">
+                        <h4 style="color: #7c93f5; font-size: 18px; margin-top: 0; margin-bottom: 0.8rem;">Key Improvements:</h4>
+                        <ul style="list-style: none; padding: 0; margin: 0 0 1rem 0;">
+                            <li style="color: #b8c5db; padding: 8px 0 8px 25px; position: relative; line-height: 1.6;"><span style="position: absolute; left: 0; color: #7c93f5; font-weight: bold;">▸</span> Tightened player physics and air control</li>
+                            <li style="color: #b8c5db; padding: 8px 0 8px 25px; position: relative; line-height: 1.6;"><span style="position: absolute; left: 0; color: #7c93f5; font-weight: bold;">▸</span> Added cave sections with hazards</li>
+                            <li style="color: #b8c5db; padding: 8px 0 8px 25px; position: relative; line-height: 1.6;"><span style="position: absolute; left: 0; color: #7c93f5; font-weight: bold;">▸</span> Introduced spike mechanics for precision challenges</li>
+                            <li style="color: #b8c5db; padding: 8px 0 8px 25px; position: relative; line-height: 1.6;"><span style="position: absolute; left: 0; color: #7c93f5; font-weight: bold;">▸</span> Enhanced visual feedback for player actions</li>
+                        </ul>
+                        <h4 style="color: #7c93f5; font-size: 18px; margin-top: 1.5rem; margin-bottom: 0.8rem;">Learnings:</h4>
+                        <ul style="list-style: none; padding: 0; margin: 0 0 1rem 0;">
+                            <li style="color: #b8c5db; padding: 8px 0 8px 25px; position: relative; line-height: 1.6;"><span style="position: absolute; left: 0; color: #7c93f5; font-weight: bold;">▸</span> Cave difficulty spike too high for new players</li>
+                            <li style="color: #b8c5db; padding: 8px 0 8px 25px; position: relative; line-height: 1.6;"><span style="position: absolute; left: 0; color: #7c93f5; font-weight: bold;">▸</span> Gliding mechanics needed more polish</li>
+                            <li style="color: #b8c5db; padding: 8px 0 8px 25px; position: relative; line-height: 1.6;"><span style="position: absolute; left: 0; color: #7c93f5; font-weight: bold;">▸</span> Players enjoyed the risk/reward of dangerous sections</li>
+                        </ul>
+                    </div>
+                    <div class="iteration-media" style="order: 2;">
+                        <video controls muted loop style="width: 100%; border-radius: 8px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); border: 1px solid rgba(124, 147, 245, 0.3);">
+                            <source src="images/last-acorn/demo2.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                <div class="iteration-screenshot">
+                    <img src="images/last-acorn/demo2.png" alt="Demo 2 Screenshot" style="width: 100%; border-radius: 8px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); border: 1px solid rgba(124, 147, 245, 0.3);">
+                </div>
+            </div>
+
+            <!-- Demo 3 -->
+            <div class="iteration-section" style="margin-bottom: 5rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(124, 147, 245, 0.2);">
+                <div class="iteration-header" style="text-align: center; margin-bottom: 2rem;">
+                    <span class="iteration-badge" style="display: inline-block; background: linear-gradient(135deg, #7c93f5 0%, #9b87f5 100%); color: white; padding: 8px 20px; border-radius: 20px; font-size: 14px; font-weight: 600; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 1px;">Demo 3</span>
+                    <h3 style="color: #fff; font-size: 28px; margin: 0;">Polished Mechanics & Interactive Elements</h3>
+                </div>
+                <div class="iteration-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 2rem;">
+                    <div class="iteration-media">
+                        <video controls muted loop style="width: 100%; border-radius: 8px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); border: 1px solid rgba(124, 147, 245, 0.3);">
+                            <source src="images/last-acorn/demo3.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="iteration-description">
+                        <h4 style="color: #7c93f5; font-size: 18px; margin-top: 0; margin-bottom: 0.8rem;">Key Improvements:</h4>
+                        <ul style="list-style: none; padding: 0; margin: 0 0 1rem 0;">
+                            <li style="color: #b8c5db; padding: 8px 0 8px 25px; position: relative; line-height: 1.6;"><span style="position: absolute; left: 0; color: #7c93f5; font-weight: bold;">▸</span> Added interactive NPCs (snakes with contact damage)</li>
+                            <li style="color: #b8c5db; padding: 8px 0 8px 25px; position: relative; line-height: 1.6;"><span style="position: absolute; left: 0; color: #7c93f5; font-weight: bold;">▸</span> Balanced difficulty curve across sections</li>
+                            <li style="color: #b8c5db; padding: 8px 0 8px 25px; position: relative; line-height: 1.6;"><span style="position: absolute; left: 0; color: #7c93f5; font-weight: bold;">▸</span> Polished gliding with better air control</li>
+                            <li style="color: #b8c5db; padding: 8px 0 8px 25px; position: relative; line-height: 1.6;"><span style="position: absolute; left: 0; color: #7c93f5; font-weight: bold;">▸</span> Improved level design flow and pacing</li>
+                        </ul>
+                        <h4 style="color: #7c93f5; font-size: 18px; margin-top: 1.5rem; margin-bottom: 0.8rem;">Learnings:</h4>
+                        <ul style="list-style: none; padding: 0; margin: 0 0 1rem 0;">
+                            <li style="color: #b8c5db; padding: 8px 0 8px 25px; position: relative; line-height: 1.6;"><span style="position: absolute; left: 0; color: #7c93f5; font-weight: bold;">▸</span> Players loved the simple, responsive controls</li>
+                            <li style="color: #b8c5db; padding: 8px 0 8px 25px; position: relative; line-height: 1.6;"><span style="position: absolute; left: 0; color: #7c93f5; font-weight: bold;">▸</span> Cave sections needed clearer visual cues</li>
+                            <li style="color: #b8c5db; padding: 8px 0 8px 25px; position: relative; line-height: 1.6;"><span style="position: absolute; left: 0; color: #7c93f5; font-weight: bold;">▸</span> More enemy variety would add depth</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="iteration-screenshot">
+                    <img src="images/last-acorn/demo3.png" alt="Demo 3 Screenshot" style="width: 100%; border-radius: 8px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); border: 1px solid rgba(124, 147, 245, 0.3);">
+                </div>
+            </div>
+
+            <!-- Demo 4 -->
+            <div class="iteration-section" style="margin-bottom: 5rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(124, 147, 245, 0.2);">
+                <div class="iteration-header" style="text-align: center; margin-bottom: 2rem;">
+                    <span class="iteration-badge" style="display: inline-block; background: linear-gradient(135deg, #7c93f5 0%, #9b87f5 100%); color: white; padding: 8px 20px; border-radius: 20px; font-size: 14px; font-weight: 600; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 1px;">Demo 4</span>
+                    <h3 style="color: #fff; font-size: 28px; margin: 0;">Current Build - Playtested & Refined</h3>
+                </div>
+                <div class="iteration-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 2rem;">
+                    <div class="iteration-description" style="order: 1;">
+                        <h4 style="color: #7c93f5; font-size: 18px; margin-top: 0; margin-bottom: 0.8rem;">Final Refinements:</h4>
+                        <ul style="list-style: none; padding: 0; margin: 0 0 1rem 0;">
+                            <li style="color: #b8c5db; padding: 8px 0 8px 25px; position: relative; line-height: 1.6;"><span style="position: absolute; left: 0; color: #7c93f5; font-weight: bold;">▸</span> Fully polished movement system through extensive playtesting</li>
+                            <li style="color: #b8c5db; padding: 8px 0 8px 25px; position: relative; line-height: 1.6;"><span style="position: absolute; left: 0; color: #7c93f5; font-weight: bold;">▸</span> Enhanced pixel art and environmental details</li>
+                            <li style="color: #b8c5db; padding: 8px 0 8px 25px; position: relative; line-height: 1.6;"><span style="position: absolute; left: 0; color: #7c93f5; font-weight: bold;">▸</span> Optimized difficulty progression</li>
+                            <li style="color: #b8c5db; padding: 8px 0 8px 25px; position: relative; line-height: 1.6;"><span style="position: absolute; left: 0; color: #7c93f5; font-weight: bold;">▸</span> Refined hazard placement and visual clarity</li>
+                        </ul>
+                        <h4 style="color: #7c93f5; font-size: 18px; margin-top: 1.5rem; margin-bottom: 0.8rem;">Current Status:</h4>
+                        <ul style="list-style: none; padding: 0; margin: 0 0 1rem 0;">
+                            <li style="color: #b8c5db; padding: 8px 0 8px 25px; position: relative; line-height: 1.6;"><span style="position: absolute; left: 0; color: #7c93f5; font-weight: bold;">▸</span> Public beta available on itch.io</li>
+                            <li style="color: #b8c5db; padding: 8px 0 8px 25px; position: relative; line-height: 1.6;"><span style="position: absolute; left: 0; color: #7c93f5; font-weight: bold;">▸</span> Mechanics feel tight and responsive</li>
+                            <li style="color: #b8c5db; padding: 8px 0 8px 25px; position: relative; line-height: 1.6;"><span style="position: absolute; left: 0; color: #7c93f5; font-weight: bold;">▸</span> Ready for content expansion and Steam development</li>
+                            <li style="color: #b8c5db; padding: 8px 0 8px 25px; position: relative; line-height: 1.6;"><span style="position: absolute; left: 0; color: #7c93f5; font-weight: bold;">▸</span> Strong positive feedback from playtesters</li>
+                        </ul>
+                    </div>
+                    <div class="iteration-media" style="order: 2;">
+                        <video controls muted loop style="width: 100%; border-radius: 8px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); border: 1px solid rgba(124, 147, 245, 0.3);">
+                            <source src="images/last-acorn/demo4.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                <div class="iteration-screenshot">
+                    <img src="images/last-acorn/demo4.png" alt="Demo 4 Screenshot" style="width: 100%; border-radius: 8px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); border: 1px solid rgba(124, 147, 245, 0.3);">
+                </div>
+            </div>
+
+            <div class="iteration-summary" style="margin-top: 5rem; text-align: center;">
+                <h3 style="color: #fff; font-size: 32px; margin-bottom: 3rem;">Key Takeaways from Development</h3>
+                <div class="takeaway-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                    <div class="takeaway-card" style="background: rgba(20, 26, 50, 0.6); padding: 2rem; border-radius: 8px; border: 1px solid rgba(124, 147, 245, 0.2); transition: all 0.3s ease;">
+                        <i class="fa fa-lightbulb-o" aria-hidden="true" style="font-size: 40px; color: #7c93f5; margin-bottom: 1rem; display: block;"></i>
+                        <h4 style="color: #fff; font-size: 20px; margin-bottom: 1rem;">Simplicity Wins</h4>
+                        <p style="color: #b8c5db; line-height: 1.6; margin: 0;">Through playtesting, we learned that simple, polished mechanics trump complex systems. Players value responsiveness over feature bloat.</p>
+                    </div>
+                    <div class="takeaway-card" style="background: rgba(20, 26, 50, 0.6); padding: 2rem; border-radius: 8px; border: 1px solid rgba(124, 147, 245, 0.2); transition: all 0.3s ease;">
+                        <i class="fa fa-users" aria-hidden="true" style="font-size: 40px; color: #7c93f5; margin-bottom: 1rem; display: block;"></i>
+                        <h4 style="color: #fff; font-size: 20px; margin-bottom: 1rem;">Playtesting is Essential</h4>
+                        <p style="color: #b8c5db; line-height: 1.6; margin: 0;">Every iteration was driven by player feedback. Watching real users interact with the game revealed issues we never would have found internally.</p>
+                    </div>
+                    <div class="takeaway-card" style="background: rgba(20, 26, 50, 0.6); padding: 2rem; border-radius: 8px; border: 1px solid rgba(124, 147, 245, 0.2); transition: all 0.3s ease;">
+                        <i class="fa fa-refresh" aria-hidden="true" style="font-size: 40px; color: #7c93f5; margin-bottom: 1rem; display: block;"></i>
+                        <h4 style="color: #fff; font-size: 20px; margin-bottom: 1rem;">Iterate Fearlessly</h4>
+                        <p style="color: #b8c5db; line-height: 1.6; margin: 0;">We weren't afraid to cut features or completely rework systems. Demo 2's cave difficulty was too high, so we rebuilt the entire progression.</p>
+                    </div>
+                    <div class="takeaway-card" style="background: rgba(20, 26, 50, 0.6); padding: 2rem; border-radius: 8px; border: 1px solid rgba(124, 147, 245, 0.2); transition: all 0.3s ease;">
+                        <i class="fa fa-code" aria-hidden="true" style="font-size: 40px; color: #7c93f5; margin-bottom: 1rem; display: block;"></i>
+                        <h4 style="color: #fff; font-size: 20px; margin-bottom: 1rem;">Polish Takes Time</h4>
+                        <p style="color: #b8c5db; line-height: 1.6; margin: 0;">The movement system went through dozens of small tweaks. The final 10% of polish took 50% of the development time, but it's what makes the game feel great.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="experience" style="padding: 75px 15px;">
+        <div class="container">
+            <h2 class="heading" style="text-align: center; margin-bottom: 50px;">Development Team</h2>
+            <div class="row" style="display: flex; justify-content: center; flex-wrap: wrap;">
+                <div class="col-md-4" style="margin-bottom: 30px;">
+                    <div class="feature-card">
+                        <h3>Luke McFall</h3>
+                        <p style="color: #7c93f5; font-weight: 600; margin-bottom: 15px;">Lead Gameplay Designer</p>
+                        <p>Designed and implemented core movement mechanics, level design, and gameplay systems. 
+                           Focused on mechanical polish through iterative playtesting.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" style="margin-bottom: 30px;">
+                    <div class="feature-card">
+                        <h3>Mateo Larrea</h3>
+                        <p style="color: #9b87f5; font-weight: 600; margin-bottom: 15px;">Sound & Game Feel Designer</p>
+                        <p>Created audio design and sound effects. Enhanced game feel through audio-visual feedback and polish.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" style="margin-bottom: 30px;">
+                    <div class="feature-card">
+                        <h3>Art Team</h3>
+                        <p style="color: #f59aad; font-weight: 600; margin-bottom: 15px;">Visual Design</p>
+                        <p>Three talented artists who handled art direction, pixel art assets, and visual design. 
+                           Sourced and integrated assets to create the game's charming aesthetic.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="projects" class="background-alt" style="padding: 75px 15px;">
+        <div class="container">
+            <h2 class="heading" style="text-align: center; margin-bottom: 50px;">Key Features & Mechanics</h2>
+            <div class="row">
+                <div class="col-md-4" style="margin-bottom: 30px;">
+                    <div class="feature-card">
+                        <div style="font-size: 2.5em; margin-bottom: 15px; color: #7c93f5;">
+                            <i class="fa fa-arrows" aria-hidden="true"></i>
+                        </div>
+                        <h3>Fluid Movement System</h3>
+                        <p>Custom-built player movement featuring three core mechanics: climbing on trees, precise jumping, 
+                           and smooth gliding. All three mechanics work seamlessly together and are equally viable options 
+                           for traversal, creating diverse gameplay possibilities.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" style="margin-bottom: 30px;">
+                    <div class="feature-card">
+                        <div style="font-size: 2.5em; margin-bottom: 15px; color: #9b87f5;">
+                            <i class="fa fa-map" aria-hidden="true"></i>
+                        </div>
+                        <h3>Dual Environment Design</h3>
+                        <p>Navigate through peaceful forest sections with tree climbing and exploration, then test your 
+                           skills in dangerous cave sections featuring spikes on floors and ceilings. Cave segments emphasize 
+                           precise gliding through the air with minimal room for error.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" style="margin-bottom: 30px;">
+                    <div class="feature-card">
+                        <div style="font-size: 2.5em; margin-bottom: 15px; color: #f59aad;">
+                            <i class="fa fa-users" aria-hidden="true"></i>
+                        </div>
+                        <h3>Interactive Hazards</h3>
+                        <p>Encounter unique NPCs and environmental challenges including snakes that damage the player 
+                           on contact, deadly spikes requiring precision platforming, and various obstacles that test 
+                           your mastery of the movement system.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4" style="margin-bottom: 30px;">
+                    <div class="feature-card">
+                        <div style="font-size: 2.5em; margin-bottom: 15px; color: #7c93f5;">
+                            <i class="fa fa-gamepad" aria-hidden="true"></i>
+                        </div>
+                        <h3>Polished Controls</h3>
+                        <p>Extensive playtesting and iteration resulted in tight, responsive controls that feel 
+                           satisfying to use. Every movement is deliberate and predictable, making challenging 
+                           sections feel fair and rewarding to complete.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" style="margin-bottom: 30px;">
+                    <div class="feature-card">
+                        <div style="font-size: 2.5em; margin-bottom: 15px; color: #9b87f5;">
+                            <i class="fa fa-trophy" aria-hidden="true"></i>
+                        </div>
+                        <h3>Acorn Collection</h3>
+                        <p>Play as a mother squirrel gathering acorns throughout the world. The collection mechanic 
+                           provides goals and rewards exploration while driving players to master the movement system 
+                           and navigate increasingly challenging areas.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" style="margin-bottom: 30px;">
+                    <div class="feature-card">
+                        <div style="font-size: 2.5em; margin-bottom: 15px; color: #f59aad;">
+                            <i class="fa fa-paint-brush" aria-hidden="true"></i>
+                        </div>
+                        <h3>Charming Pixel Art</h3>
+                        <p>Beautiful 2D pixel art style brings the world to life with detailed environments, 
+                           expressive character animations, and a cohesive visual aesthetic that enhances 
+                           the platforming experience.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="education" style="padding: 75px 15px;">
+        <div class="container">
+            <h2 class="heading" style="text-align: center; margin-bottom: 50px;">Development Journey</h2>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="education-block">
+                        <h3>CS 247G: Designed for Play</h3>
+                        <span class="education-date">Stanford University • Academic Year Project</span>
+                        <p style="margin-top: 20px; font-size: 1.05em; line-height: 1.7;">
+                            The Last Acorn was developed as a group project for Stanford's CS 247G course, which focuses 
+                            on game design principles and player experience. The project allowed the team to explore 
+                            core gameplay mechanics, level design, and player feedback through an iterative development process.
+                        </p>
+                    </div>
+
+                    <div class="education-block">
+                        <h3>Current State & Beta Testing</h3>
+                        <span class="education-date">Early Beta • Active Development</span>
+                        <p style="margin-top: 20px; font-size: 1.05em; line-height: 1.7;">
+                            The game is currently in early beta with a playable demo available on itch.io. Development has 
+                            been focused on mechanical polish, with extensive playtesting sessions to refine the movement 
+                            system and ensure challenging-but-fair level design. Player feedback has been instrumental in 
+                            improving the game feel and responsiveness of the controls.
+                        </p>
+                    </div>
+
+                    <div class="education-block">
+                        <h3>Technical Achievements</h3>
+                        <span class="education-date">Unity Engine • Custom Systems</span>
+                        <p style="margin-top: 20px; font-size: 1.05em; line-height: 1.7;">
+                            Built from the ground up in Unity, the project features custom-built player movement systems 
+                            that seamlessly integrate climbing, jumping, and gliding mechanics. The level design process 
+                            involved careful iteration to ensure each mechanic feels essential and provides unique solutions 
+                            to platforming challenges. The team balanced accessibility with difficulty through thoughtful 
+                            placement of hazards and environmental storytelling.
+                        </p>
+                    </div>
+
+                    <div class="education-block">
+                        <h3>Future Plans</h3>
+                        <span class="education-date">Steam Release • Expanded Content</span>
+                        <p style="margin-top: 20px; font-size: 1.05em; line-height: 1.7;">
+                            Plans for the future include releasing the game on Steam with expanded content, additional levels, 
+                            and seasonal elements that add variety to the gameplay experience. The team aims to build upon 
+                            the solid mechanical foundation with more diverse environments, challenges, and narrative elements 
+                            that deepen the player's connection to the mother squirrel's journey.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="skills" class="background-alt" style="padding: 75px 15px;">
+        <div class="container">
+            <h2 class="heading" style="text-align: center; margin-bottom: 50px;">Technologies & Tools</h2>
+            <ul class="tech-tags" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; list-style: none; padding: 0;">
+                <li style="background: rgba(124, 147, 245, 0.15); border: 1px solid #7c93f5; color: #7c93f5; padding: 10px 20px; border-radius: 25px; font-size: 0.95em;">Unity</li>
+                <li style="background: rgba(124, 147, 245, 0.15); border: 1px solid #7c93f5; color: #7c93f5; padding: 10px 20px; border-radius: 25px; font-size: 0.95em;">C#</li>
+                <li style="background: rgba(155, 135, 245, 0.15); border: 1px solid #9b87f5; color: #9b87f5; padding: 10px 20px; border-radius: 25px; font-size: 0.95em;">2D Pixel Art</li>
+                <li style="background: rgba(155, 135, 245, 0.15); border: 1px solid #9b87f5; color: #9b87f5; padding: 10px 20px; border-radius: 25px; font-size: 0.95em;">Level Design</li>
+                <li style="background: rgba(245, 154, 173, 0.15); border: 1px solid #f59aad; color: #f59aad; padding: 10px 20px; border-radius: 25px; font-size: 0.95em;">Game Feel</li>
+                <li style="background: rgba(245, 154, 173, 0.15); border: 1px solid #f59aad; color: #f59aad; padding: 10px 20px; border-radius: 25px; font-size: 0.95em;">Player Movement</li>
+                <li style="background: rgba(124, 147, 245, 0.15); border: 1px solid #7c93f5; color: #7c93f5; padding: 10px 20px; border-radius: 25px; font-size: 0.95em;">Playtesting</li>
+                <li style="background: rgba(155, 135, 245, 0.15); border: 1px solid #9b87f5; color: #9b87f5; padding: 10px 20px; border-radius: 25px; font-size: 0.95em;">Iterative Design</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="contact" style="padding: 75px 15px 50px;">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 30px;">Ready to Play?</h2>
+            <div style="text-align: center; margin-bottom: 40px;">
+                <a href="https://studio-team22.itch.io/the-last-acorn" target="_blank" class="btn-rounded-white" 
+                   style="margin: 10px; padding: 15px 30px; font-size: 1.1em; display: inline-block; background: rgba(124, 147, 245, 0.15); border: 2px solid #7c93f5; color: #7c93f5;">
+                    <i class="fa fa-gamepad" aria-hidden="true"></i> Play on itch.io
+                </a>
+                <a href="index.html#projects" class="btn-rounded-white" 
+                   style="margin: 10px; padding: 15px 30px; font-size: 1.1em; display: inline-block;">
+                    <i class="fa fa-arrow-left" aria-hidden="true"></i> Back to Portfolio
+                </a>
+            </div>
+            <div class="row">
+                <div class="col-sm-5 copyright">
+                    <p>Copyright &copy; <span id="current-year">2025</span> Luke McFall</p>
+                </div>
+                <div class="col-sm-2 top">
+                    <span id="to-top">
+                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="col-sm-5 social">
+                    <ul>
+                        <li><a href="https://github.com/Piecewise13" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                        <li><a href="https://linkedin.com/in/luke-mcfall" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/scripts.min.js"></script>
+</body>
+
+</html>
